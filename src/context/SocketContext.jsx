@@ -16,7 +16,7 @@ export const SocketContextProvider = ({ children }) => {
 	useEffect(() => {
 		if (authUser) {
 			console.log("Auth user ID:", authUser._id);  // Check if this is defined
-			const socket = io("http://localhost:8000", {
+			const socket = io("https://chat-app-server-olive-tau.vercel.app", {
 				query: {
 					userId: authUser._id,
 				},
